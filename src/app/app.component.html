@@ -1,5 +1,12 @@
 <nav>
-  <button
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+  </button>
+</nav>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    
+    <button
     [routerLink]="['']"
     routerLinkActive="active-button"
     [routerLinkActiveOptions]="{ exact: true }"
@@ -15,6 +22,17 @@
   <button [routerLink]="['notes']" routerLinkActive="active-button">
     Notes
   </button>
-</nav>
+  </mat-drawer>
 
-<router-outlet></router-outlet>
+ 
+
+</mat-drawer-container>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened></mat-drawer>
+  <mat-drawer-content></mat-drawer-content>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
+
