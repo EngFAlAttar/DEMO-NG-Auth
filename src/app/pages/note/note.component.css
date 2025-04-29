@@ -1,0 +1,15 @@
+mat-card{
+    background: none;
+    background-image: url('../../../assets/sticky_note.png');
+    background-repeat: no-repeat;
+    max-width: 500px;
+    min-height: 500px;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+}
+
+mat-card-content{
+    max-width: 300px;
+}
